@@ -1,0 +1,78 @@
+.main{
+    min-height: 100dvh;
+    min-height: 100svh;
+    background-color:#ffffff54;
+    background-image: url('/assets/Task.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+}
+
+.heading{
+    text-align: center;
+    font-size: 52px;
+    text-transform: capitalize;
+    color: linear-gradient();
+}
+.center{
+    text-align: center;
+}
+.card{
+    // padding: .5em;
+    background-color: #ffffff3d;
+    border-radius: 2em;
+    box-shadow: 1px 2px 3px;
+}
+.card1{
+    background-color: rgba(75, 75, 241, 0.671);
+    border-radius: 2em;
+}
+.add-div{
+    padding-block: 2em;
+}
+.add{
+    padding: .4em 2em;
+    background-color: #fff;
+    border-radius: 2em;
+    color:rgba(75, 75, 241, 0.671) ;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.add:hover,
+:focus{
+    background-color: rgb(75, 75, 241);
+    color: #fff;
+    transition:  1.2s ease-out;
+}
+.h3{
+    font-size: 20px;
+    text-decoration: underline;
+}
+.list{
+    padding-inline: 2em;
+    padding-block:2em ;
+    max-width: 80%;
+    font-size: 20px;
+}
+.li{
+    display: flex;
+    justify-content: space-between;
+}
+@media (width>60em) {
+   .card{
+    display: flex;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+   }
+   .card1{
+    width: 42%;
+   }
+   .card2{
+    width: 42%;
+   }
+}

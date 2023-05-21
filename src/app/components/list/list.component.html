@@ -1,7 +1,10 @@
 <section class="main">
-    <h1 class="heading">{{title}}</h1>
+    <h1 class="heading"><span class="blue1">{{title}} </span> <span class="blue">list</span></h1>
+    <div class="center add-div" [style.display]="Invisible">
+        <button class="add" (click)="visibilitytoggle()"><fa-icon [icon]="faCirclePlus" class="iconadd"></fa-icon>Add task</button>
+    </div>
 
-    <div class="card">
+    <div class="card" [style.display]="Invisible">
         <div class="card1">
             <h3 class="h3 center">{{h3}}</h3>
             <ul class="list">
@@ -10,7 +13,7 @@
             </li>
         </ul>
         <div class="center add-div">
-            <button class="add">add task</button>
+            <button class="add"><fa-icon [icon]="faFileCheck" class="iconadd"></fa-icon>Mark as done</button>
         </div>
         </div>
         <div class="card2">
@@ -26,6 +29,22 @@
                     waking up
                 </li>
             </ul>
+        </div>
+    </div>
+    
+    <div class="addtask cardsecond" [style.display]="visible" >
+        <div class="center add-div" [style.display]="visible">
+            <button class="add" (click)="styleschange()"><fa-icon [icon]="faCirclePlus" class="iconadd"></fa-icon>back home</button>
+        </div>
+        <div class="flex">
+            <div class="flex block-newtask">
+                <label for="newitem" class="newparagraph">{{what}}</label>
+                <input type="text" class="input" (keyup.enter)="additem(newtask.value); newtask.value = ''" #newtask>
+                <div class="center add-div">
+                    <button class="add" (click)="additem(newtask.value)"><fa-icon [icon]="faFloppyDisks" class="iconadd"></fa-icon>Save task</button>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>

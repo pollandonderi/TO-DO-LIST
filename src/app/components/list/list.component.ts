@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlus, faFileCircleCheck, faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-list',
@@ -8,8 +8,19 @@ import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 })
 export class ListComponent {
 
-  falayerplus = faCirclePlus;
-  title = "to do list";
+  faCirclePlus = faCirclePlus;
+  faFileCheck = faFileCircleCheck;
+  faFloppyDisks = faFloppyDisk;
+
+  public visible = "none";
+  public Invisible = "";
+
+  visibilitytoggle() {
+    this.visible = "";
+    this.Invisible = "none";
+    
+   }
+  title = "to do";
   h3="your tasks";
   h32 = "summary";
 filter :"all" | "active" | "done" = "all";
@@ -51,4 +62,18 @@ additem(description:string){
   }
   )
 }
+
+//adding task
+what = "What would you like to do today?";
+addTaskclick(){
+
+}
+ styleschange(){
+  this.visible = "none";
+    this.Invisible = "";
+ }
+
+ additems(){
+  console.log()
+ }
 }
